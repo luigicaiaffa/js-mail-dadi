@@ -4,10 +4,18 @@
 
 // # Raccolta Dati
 // genera un numero random per il giocatore e assegnalo a una variabile
+const userNumber = Math.ceil(Math.random() * 6);
+
 // genera un numero random per il computer e assegnalo a una variabile
+const computerNumber = Math.ceil(Math.random() * 6);
+
 // crea variabile messaggio di output
+let outputMessage;
 
 // # Elaborazione
+// SE i numeri sono uguali
+// messaggio di output pareggio
+
 // SE il numero del giocatore è maggiore del numero del computer
 // messaggio di output giocatore vincente
 
@@ -16,3 +24,10 @@
 
 // # Output
 // messaggio di output
+
+// debug console log
+console.log(`
+    userNumber: ${userNumber}
+    computerNumber: ${computerNumber}
+    outputMessage: ${outputMessage}
+`);

@@ -50,8 +50,8 @@ alert(outputMessage);
 
 // debug console log
 console.log(`
-    registeredMails : ${registeredMails}
-    userMail : ${userMail}
-    isUserMailValid : ${isUserMailValid} 
-    outputMessage : ${outputMessage} 
+    registeredMails: ${registeredMails}
+    userMail: ${userMail}
+    isUserMailValid: ${isUserMailValid} 
+    outputMessage: ${outputMessage} 
 `);
