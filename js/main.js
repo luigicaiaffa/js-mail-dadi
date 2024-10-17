@@ -21,15 +21,40 @@ let outputMessage;
 
 // # Elaborazione
 // verifica se la mail è inserita in formato valido
+const isUserMailValid = userMail.includes("@") && userMail.includes(".");
 
-// SE la mail inserita è valida AND uguale ad una mail della lista di mail
-//      messaggio di output esito positivo
+// SE la mail inserita è valida
+if (isUserMailValid) {
+  //   SE la mail inserita è uguale ad una mail della lista di mail
+  if (registeredMails.includes(`${userMail}`)) {
+    // messaggio di output esito positivo
+    outputMessage = `Accesso consentito - Bentornato ${userMail}`;
+  }
+
+  // ALTRIMENTI
+  else {
+    // messaggio di output esito negativo
+    outputMessage = `Accesso negato - eMail non registrata`;
+  }
+}
 
 // ALTRIMENTI
-//      messaggio di output esito negativo
+else {
+  // messaggio di output eMail inserita in formato non valido
+  outputMessage = `eMail inserita in formato non valido`;
+}
 
 // # Output
 // messaggio di output
+alert(outputMessage);
+
+// debug console log
+console.log(`
+    registeredMails : ${registeredMails}
+    userMail : ${userMail}
+    isUserMailValid : ${isUserMailValid} 
+    outputMessage : ${outputMessage} 
+`);
 
 // ! Gioco dei dadi
 // * Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
