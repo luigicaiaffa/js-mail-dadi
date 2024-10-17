@@ -4,9 +4,20 @@
 // * stampa un messaggio appropriato sull'esito del controllo.
 
 // # Raccolta Dati
-// lista delle mail registrate
+// creo una lista di mail registrate
+const registeredMails = [
+  "mail@mail.com",
+  "info@mail.it",
+  "ads@mail.com",
+  "user@mail.it",
+  "ciao@mail.it",
+];
+
 // chiedi una mail all'utente con un prompt e assegnale una variabile
+const userMail = prompt("Inserisci la tua eMail");
+
 // crea variabile per messaggio di output
+let outputMessage;
 
 // # Elaborazione
 // verifica se la mail è inserita in formato valido
