@@ -9,25 +9,45 @@ const userNumber = Math.ceil(Math.random() * 6);
 // genera un numero random per il computer e assegnalo a una variabile
 const computerNumber = Math.ceil(Math.random() * 6);
 
-// crea variabile messaggio di output
+// crea variabile per risultato e messaggio di output
+let result;
 let outputMessage;
 
 // # Elaborazione
 // SE i numeri sono uguali
-// messaggio di output pareggio
+if (userNumber === computerNumber) {
+  // messaggio di output pareggio
+  result = "E' un Pareggio";
+}
 
 // SE il numero del giocatore è maggiore del numero del computer
-// messaggio di output giocatore vincente
+if (userNumber > computerNumber) {
+  // messaggio di output giocatore vincente
+  result = "Hai Vinto!";
+}
 
 // ALTRIMENTI
-// messaggio di output computer vincente
+if (userNumber < computerNumber) {
+  // messaggio di output computer vincente
+  result = "Hai Perso :(";
+}
 
 // # Output
 // messaggio di output
+outputMessage = `
+    - Numero estratto: ${userNumber} 
+    - Numero del computer: ${computerNumber}
+    
+    ${result}
+`;
+
+// alert
+alert(outputMessage);
 
 // debug console log
 console.log(`
     userNumber: ${userNumber}
     computerNumber: ${computerNumber}
+    result: ${result}
     outputMessage: ${outputMessage}
 `);
